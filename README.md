@@ -24,13 +24,25 @@ Async REST API wrapper around the `pyserp` library.
 
 ### Local
 
-1) Install dependencies:
+1) Create and activate a virtual environment:
+
+```bash
+# Windows (PowerShell)
+python -m venv .venv
+. .venv/Scripts/Activate.ps1
+
+# macOS / Linux
+python -m venv .venv
+source .venv/bin/activate
+```
+
+2) Install dependencies:
 
 ```bash
 pip install -e .
 ```
 
-2) Create a local env file:
+3) Create a local env file:
 
 ```bash
 # Windows (PowerShell)
@@ -40,7 +52,7 @@ copy .env.example .env
 cp .env.example .env
 ```
 
-3) Run the service:
+4) Run the service:
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
