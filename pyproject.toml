@@ -17,14 +17,31 @@ dependencies = [
     "gunicorn>=22.0.0",
     "pydantic-settings>=2.2.1",
     "python-dotenv>=1.0.1",
-    "pyserp>=1.0.0",
-    "httpx"
+    "pyserp>=1.0.0"
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=8.2.0",
     "httpx>=0.27.0",
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Framework :: FastAPI",
+  "Framework :: AsyncIO",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [tool.hatch.build.targets.wheel]
