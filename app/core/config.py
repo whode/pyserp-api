@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     google_headers: dict[str, str] = Field(default_factory=dict)
     google_cookies: dict[str, str] = Field(default_factory=dict)
     google_apply_default_headers: bool = True
-    google_apply_default_cookies: bool = True
+    google_apply_default_cookies: bool = False
 
     bing_headers: dict[str, str] = Field(default_factory=dict)
     bing_cookies: dict[str, str] = Field(default_factory=dict)
