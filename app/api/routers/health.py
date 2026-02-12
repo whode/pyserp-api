@@ -29,6 +29,6 @@ async def version():
     return {
         "app": "pyserp-api",
         "env": settings.env,
-        "version": _safe_version("pyserp-api", "0.0.1"),
+        "version": _safe_version("pyserp-api", "0.1.0"),
         "pyserp_version": getattr(pyserp, "__version__", "unknown"),
     }

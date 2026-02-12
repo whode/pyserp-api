@@ -15,7 +15,7 @@ def _app_version() -> str:
     try:
         return metadata.version("pyserp-api")
     except metadata.PackageNotFoundError:
-        return "0.0.1"
+        return "0.1.0"
 
 
 @asynccontextmanager
