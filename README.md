@@ -1,6 +1,7 @@
 # pyserp-api
 
 [![Version](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fgithub.com%2Fwhode%2Fpyserp-api%2Fraw%2Frefs%2Fheads%2Fmain%2Fpyproject.toml&query=project.version&label=version)](https://github.com/whode/pyserp-api/blob/main/pyproject.toml)
+[![Workflow Status](https://img.shields.io/github/actions/workflow/status/whode/pyserp-api/ci.yml?branch=main)](https://github.com/whode/pyserp-api/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/whode/pyserp-api)](LICENSE)
 
 Async REST API wrapper around the `pyserp` library.
