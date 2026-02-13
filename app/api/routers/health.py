@@ -1,22 +1,13 @@
 from __future__ import annotations
 
-from importlib import metadata
-
 from fastapi import APIRouter
 
 import pyserp
 
 from app.core.config import get_settings
+from app.core.version import get_app_version
 
 router = APIRouter(tags=["health"])
-
-
-def _safe_version(package: str, default: str = "unknown") -> str:
-    try:
-        return metadata.version(package)
-    except metadata.PackageNotFoundError:
-        return default
-
 
 @router.get("/health")
 async def health():
@@ -29,6 +20,6 @@ async def version():
     return {
         "app": "pyserp-api",
         "env": settings.env,
-        "version": _safe_version("pyserp-api", "0.1.0"),
+        "version": get_app_version(),
         "pyserp_version": getattr(pyserp, "__version__", "unknown"),
     }

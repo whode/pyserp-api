@@ -1,21 +1,14 @@
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
-from importlib import metadata
 
 from fastapi import FastAPI
 
 from app.api.routers import bing, google, health
 from app.core.config import get_settings
 from app.core.logging import configure_logging
+from app.core.version import get_app_version
 from app.services.factory import build_bing_manager, build_google_manager
-
-
-def _app_version() -> str:
-    try:
-        return metadata.version("pyserp-api")
-    except metadata.PackageNotFoundError:
-        return "0.1.0"
 
 
 @asynccontextmanager
@@ -34,7 +27,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="pyserp-api",
-    version=_app_version(),
+    version=get_app_version(),
     lifespan=lifespan,
 )
 

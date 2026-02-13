@@ -15,7 +15,6 @@ class Settings(BaseSettings):
 
     env: str = "production"
     log_level: str = "INFO"
-    include_debug_info: bool = False
 
     ssl_verify: bool = True
     semaphore_limit: int = 100
