@@ -30,3 +30,6 @@ jobs:
 
       - name: Run tests
         run: pytest -q
+
+      - name: Run type-check
+        run: mypy app tests
