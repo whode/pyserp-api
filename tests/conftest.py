@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from collections.abc import Iterator
+
 import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
@@ -78,7 +80,7 @@ def create_test_app() -> FastAPI:
 
 
 @pytest.fixture()
-def client() -> TestClient:
+def client() -> Iterator[TestClient]:
     get_settings.cache_clear()
     app = create_test_app()
     with TestClient(app) as test_client:
