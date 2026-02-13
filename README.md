@@ -150,7 +150,9 @@ Search endpoints:
 ### Example
 
 ```bash
-curl -X POST http://localhost:8000/google/search-one   -H "Content-Type: application/json"   -d '{"query": "how to learn python"}'
+curl -X POST "http://localhost:8000/google/search-one" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "how to learn python"}'
 ```
 
 Example response (Google):
